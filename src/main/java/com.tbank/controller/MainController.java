@@ -17,8 +17,10 @@ public class MainController {
 
         TaskService taskService = ApplicationContext.getBean(TaskService.class);
         model.addAttribute("tasks", taskService.getTasks());
+        model.addAttribute("card", "Black");
+        model.addAttribute("eligible", true);
 
-        System.out.println(ANSI_YELLOW + taskService.getTasks() + ANSI_RESET);
+        //System.out.println(ANSI_YELLOW + taskService.getTasks() + ANSI_RESET);
 
         return "index";
     }

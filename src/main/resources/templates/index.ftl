@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>TbankTask</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
@@ -22,12 +23,19 @@
 
                 <div class="resolveTask">
                     ${task.resolve}
+
                     <#if task.slides??>
 
-                        <#list task.sldies as slide>
-                            ${slide.title}
-                            ${slide.text}
-                            <img src="${slide.imageUrl}">
+                        <#list task.slides as slide>
+
+                            <div class="story">
+                                <div class="contentStory" style="--position:${slide.textPosition}">
+                                    <div class="titleStory"> ${slide.title} </div>
+                                    <div class="textStory"> ${slide.text} </div>
+                                </div>
+                                <img class="imageStory" src="${slide.imageUrl}">
+                            </div>
+
                         </#list>
 
                     </#if>
@@ -36,7 +44,10 @@
 
             </div>
 
+            <hr>
+
         </#list>
+
     </div>
 
 </body>
