@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>TbankTask</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 
@@ -26,17 +27,27 @@
 
                     <#if task.slides??>
 
-                        <#list task.slides as slide>
+                        <div class="slide">
 
-                            <div class="story">
-                                <div class="contentStory" style="--position:${slide.textPosition}">
-                                    <div class="titleStory"> ${slide.title} </div>
-                                    <div class="textStory"> ${slide.text} </div>
-                                </div>
-                                <img class="imageStory" src="${slide.imageUrl}">
+                            <div class="scrollLeft">
+                                <i class="material-icons">keyboard_arrow_left</i>
                             </div>
 
-                        </#list>
+                            <#list task.slides as slide>
+                                <div class="story hide-block" id="${slide?counter}">
+                                    <div class="contentStory" style="--position:${slide.textPosition}">
+                                        <div class="titleStory"> ${slide.title} </div>
+                                        <div class="textStory"> ${slide.text} </div>
+                                    </div>
+                                    <img class="imageStory" src="${slide.imageUrl}">
+                                </div>
+                            </#list>
+
+                            <div class="scrollRight">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                            </div>
+
+                        </div>
 
                     </#if>
 
@@ -50,5 +61,6 @@
 
     </div>
 
+<script src="/js/script.js"></script>
 </body>
 </html>

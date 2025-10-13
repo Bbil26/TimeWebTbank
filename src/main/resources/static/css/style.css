@@ -12,6 +12,16 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -webkit-touch-callout: none;
+
 }
 
 /* Стили для задачи */
@@ -94,6 +104,16 @@ hr {
     }
 }
 
+.slide {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+
+}
+
 /* Анимации */
 @keyframes fadeIn {
     from {
@@ -174,4 +194,32 @@ hr {
     overflow: hidden;
     color: #fff;
     white-space: normal;
+}
+
+.scrollLeft, .scrollRight {
+    font-size: 60px;
+    color: #252525;
+    background: #FFDD2D;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.scrollLeft:hover, .scrollRight:hover {
+    cursor: pointer;
+}
+.scrollLeft .material-icons, .scrollRight .material-icons {
+    text-align: center;
+    font-size: inherit;
+    line-height: 1;
+    display: block;
+    transform: translateZ(0);
+}
+
+.hide-block {
+    display: none;
 }
