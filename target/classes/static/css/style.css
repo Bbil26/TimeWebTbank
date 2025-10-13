@@ -3,21 +3,19 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #7e7e7e 0%, #bdba94 100%);
+    background: linear-gradient(135deg, #3a3a3a 0%, #252525 100%);
     min-height: 100vh;
-    color: #333;
+    color: #f0f0f0;
 }
 
 #contentPage {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
-
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-
     -webkit-user-drag: none;
     -khtml-user-drag: none;
     -webkit-touch-callout: none;
@@ -25,59 +23,62 @@ body {
 
 /* Стили для задачи */
 .task {
-    background: white;
+    background: #2d2d2d;
     border-radius: 15px;
     padding: 30px;
     margin: 30px 0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid #404040;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .task:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 40px rgba(255, 221, 45, 0.1);
+    border-color: #FFDD2D;
 }
 
 /* Заголовок задачи */
 .taskTitle {
     font-size: 2em;
     font-weight: 700;
-    color: #2c3e50;
+    color: #FFDD2D;
     margin-bottom: 20px;
     padding-bottom: 15px;
-    border-bottom: 3px solid #3498db;
+    border-bottom: 3px solid #FFDD2D;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Описание задачи */
 .descriptionTask {
     font-size: 1.1em;
     line-height: 1.6;
-    color: #555;
+    color: #cccccc;
     margin-bottom: 25px;
     padding: 20px;
-    background: #f8f9fa;
+    background: #363636;
     border-radius: 10px;
-    border-left: 4px solid #3498db;
+    border-left: 4px solid #FFDD2D;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Решение задачи */
 .resolveTask {
-    background: #e8f4fc;
+    background: #2a2a2a;
     padding: 25px;
     border-radius: 10px;
-    border: 1px solid #b3e0ff;
+    border: 1px solid #404040;
     font-size: 1em;
     line-height: 1.5;
-    color: #2c3e50;
+    color: #e0e0e0;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
 }
-
 
 /* Разделительная линия */
 hr {
     border: none;
     height: 2px;
-    background: linear-gradient(90deg, transparent, #3498db, transparent);
+    background: linear-gradient(90deg, transparent, #FFDD2D, transparent);
     margin: 40px 0;
     border-radius: 2px;
 }
@@ -110,7 +111,6 @@ hr {
     justify-content: center;
     gap: 20px;
     margin: 20px 0;
-
 }
 
 /* Анимации */
@@ -130,37 +130,40 @@ hr {
 }
 
 .story {
-    width: 350px;
-    height: 500px;
+    width: 320px;
+    height: 560px;
     position: relative;
     border-radius: 20px;
-    border: 2px solid #fff;
+    border: 2px solid #FFDD2D;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    background: linear-gradient(to right, rgba(0, 0, 255, 0.6), rgba(0, 0, 255, 0.7));
+    box-shadow: 0 0 25px rgba(255, 221, 45, 0.3);
+    background: linear-gradient(135deg, #252525 0%, #3a3a3a 100%);
     margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.story:hover {
+    box-shadow: 0 0 35px rgba(255, 221, 45, 0.5);
+    transform: scale(1.02);
 }
 
 .imageStory {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: right;
+    object-position: center;
     display: block;
-
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none;    /* Firefox */
-    -ms-user-select: none;     /* IE10+/Edge */
-    user-select: none;         /* Standard */
-
-    -webkit-user-drag: none;   /* Запрещаем перетаскивание в Safari/Chrome */
-    -khtml-user-drag: none;
-    -webkit-touch-callout: none; /* Запрещаем выделение на тач-устройствах */
     pointer-events: none;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.story:hover .imageStory {
+    opacity: 0.9;
 }
 
 .contentStory {
@@ -169,7 +172,7 @@ hr {
     align-content: center;
     transform: translateY(-50%);
     text-align: left;
-    text-size: 16px;
+    font-size: 16px;
     padding: 8px 12px;
     z-index: 2;
     pointer-events: none;
@@ -181,18 +184,20 @@ hr {
 .titleStory {
     font-weight: bold;
     max-width: 250px;
-    white-space: nowrap;
-    overflow: hidden;
     color: #fff;
     white-space: normal;
+    font-size: 1.3em;
+    margin: 0;
 }
 
 .textStory {
     max-width: 250px;
-    white-space: nowrap;
-    overflow: hidden;
-    color: #fff;
+    color: #ffffff;
     white-space: normal;
+    font-size: 0.95em;
+    line-height: 1.4;
+    margin: 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .scrollLeft, .scrollRight {
@@ -206,19 +211,84 @@ hr {
     text-align: center;
     border-radius: 50%;
     transition: all 0.3s ease;
+    border: 2px solid #252525;
+    box-shadow: 0 4px 15px rgba(255, 221, 45, 0.4);
+    cursor: pointer;
 }
 
 .scrollLeft:hover, .scrollRight:hover {
-    cursor: pointer;
+    background: #ffeb8a;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(255, 221, 45, 0.6);
 }
+
 .scrollLeft .material-icons, .scrollRight .material-icons {
     text-align: center;
     font-size: inherit;
     line-height: 1;
     display: block;
     transform: translateZ(0);
+    font-weight: bold;
 }
 
 .hide-block {
     display: none;
+}
+
+/* Дополнительные улучшения */
+.stories-container {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    padding: 15px;
+    scroll-behavior: smooth;
+    max-width: 100%;
+}
+
+.stories-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.stories-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+    border-radius: 4px;
+}
+
+.stories-container::-webkit-scrollbar-thumb {
+    background: #FFDD2D;
+    border-radius: 4px;
+}
+
+.stories-container::-webkit-scrollbar-thumb:hover {
+    background: #ffeb8a;
+}
+
+/* Кастомный скроллбар для всего документа */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #252525;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #FFDD2D;
+    border-radius: 6px;
+    border: 2px solid #252525;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffeb8a;
+}
+
+/* Подсветка выделенного текста (если нужно разрешить выделение) */
+::selection {
+    background: #FFDD2D;
+    color: #252525;
+}
+
+::-moz-selection {
+    background: #FFDD2D;
+    color: #252525;
 }
