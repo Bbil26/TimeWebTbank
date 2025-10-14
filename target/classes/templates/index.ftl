@@ -34,8 +34,8 @@
                             </div>
 
                             <#list task.slides as slide>
-                                <div class="story hide-block" id="${slide?counter}">
-                                    <div class="contentStory" style="--position:${slide.textPosition}">
+                                <div class="story <#if slide?counter != 1>hide-block</#if>" id="${slide?counter}">
+                                    <div class="contentStory">
                                         <div class="titleStory"> ${slide.title} </div>
                                         <div class="textStory"> ${slide.text} </div>
                                     </div>

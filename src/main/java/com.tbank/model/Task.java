@@ -18,7 +18,6 @@ public class Task {
     public static class Slide {
        String title;
        String text;
-       String textPosition;
        Link link;
        String imageUrl;
     }

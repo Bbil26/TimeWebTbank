@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const scrollLeft = document.querySelector('.scrollLeft');
     const scrollRight = document.querySelector('.scrollRight');
-    document.getElementById("1").classList.remove('hide-block');
+    document.getElementById("1").querySelector(".contentStory").classList.add("firstStory");
 
     function showStep(index) {
         stories.forEach(step => step.classList.add('hide-block'));
