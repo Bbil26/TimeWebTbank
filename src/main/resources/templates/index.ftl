@@ -34,13 +34,27 @@
                             </div>
 
                             <#list task.slides as slide>
-                                <div class="story <#if slide?counter != 1>hide-block</#if>" id="${slide?counter}">
+
+                                <#if slide.link??>
+                                    <a id="link" class="hide-block" href="${slide.link.url}">
+                                </#if>
+
+                                <div class="story
+                                <#if slide?counter != 1>hide-block</#if>"
+                                id="${slide?counter}">
+
                                     <div class="contentStory">
-                                        <div class="titleStory"> ${slide.title} </div>
-                                        <div class="textStory"> ${slide.text} </div>
+                                        <div class="titleStory">${slide.title}</div>
+                                        <div class="textStory">${slide.text}</div>
+                                        <#if slide.link??>
+                                           <div class="textUrl">${slide.link.preview}</div>
+                                        </#if>
                                     </div>
                                     <img class="imageStory" src="${slide.imageUrl}">
                                 </div>
+                                <#if slide.link??>
+                                    </a>
+                                </#if>
                             </#list>
 
                             <div class="scrollRight">

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/mailStyle.css">
+</head>
+<body>
+<div class="email">
+    <table class="email-table">
+        <tr>
+            <td class="text-cell">
+                Уважаемый клиент!
+            </td>
+        </tr>
+        <tr>
+            <td class="text-cell highlight-cell">
+                Напоминаем о необходимости оплатить налог на доходы от продажи ценных бумаг за 2020 год. Сумма вашей задолженности по НДФЛ составляет 500 рублей.
+            </td>
+        </tr>
+        <tr>
+            <td class="text-cell">
+                Чтобы всё прошло автоматически, просто убедитесь, что на брокерском счете есть достаточная сумма
+                до 31.01.2021. Налог может списываться частями по мере поступления средств — не обязательно оплачивать сразу всей суммой.
+            </td>
+        </tr>
+        <tr>
+            <td class="text-cell">
+                В случае недостатка средств на счете до указанной даты, потребуется самостоятельное перечисление недостающих средств.
+                Согласно законодательству, при невозможности удержать налог мы обязаны проинформировать налоговые органы о сумме задолженности.
+            </td>
+        </tr>
+        <tr>
+            <td class="text-cell">
+                Пожалуйста, позаботьтесь об оплате вовремя, чтобы этого избежать.
+            </td>
+        </tr>
+    </table>
+
+    <div class="button-container">
+        <button class="pay-button" onclick="payNow()">Оплатить</button>
+    </div>
+
+    <div class="footer">
+        <img src="https://proxy.imgsmail.ru/?e=1760474343&h=NMxHtmtkuBBS0rQ2yHvdlA&email174=bbil26%40vk.com&flags=0&message_id=17533562750671681240&is_https=1&url174=aHR0cHM6Ly9pbWdwcm94eS5jZG4tdGlua29mZi5ydS9jb21wcmVzc2VkL2FIUjBjSE02THk5bGJXRnBiQzFpZFdsc1pHVnlMV0YwZEdGamFHMWxiblJ6TG5NekxXMXpheTUwYVc1cmIyWm1MbkoxTHpka1pUVTNOekJoTW1NM05ESmtNR1ExTW1JelltRm1NRGd4WkRBd09HSms~" alt="Логотип">
+    </div>
+</div>
+
+<script>
+    function payNow() {
+        alert('Переход к оплате...');
+        // Здесь можно добавить логику перехода на страницу оплаты
+        // window.location.href = '/payment-page';
+    }
+</script>
+</body>
+</html>

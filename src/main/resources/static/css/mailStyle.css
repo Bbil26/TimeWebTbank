@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background-color: #5a5a5a;
+    color: #e8e8e8;
+    line-height: 1.6;
+}
+
+.email {
+    padding: 30px 25px 0 25px;
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #2d2d2d;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.content {
+    padding: 50px;
+}
+
+.email-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #2d2d2d;
+}
+
+.email-table td {
+    padding: 7px 0;
+    vertical-align: top;
+    border: none;
+    background-color: #2d2d2d;
+}
+
+.email-table tr:first-child td {
+    padding-top: 0;
+}
+
+.email-table tr:last-child td {
+    padding-bottom: 0;
+}
+
+.text-cell {
+    font-family:"SF Pro Display","San Francisco","Segoe","Helvetica","Roboto",Arial,sans-serif;
+    font-size:17px;
+    line-height:24px;
+    color:#eee;
+    font-weight:normal;
+    padding-top:4px;
+    padding-bottom:16px
+}
+
+.highlight-cell {
+    background-color: #2d2d2d;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    margin: 15px 0;
+}
+
+.pay-button {
+    display: inline-block;
+    background-color: #d4af37;
+    color: #2d2d2d;
+    padding: 14px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-family: "SF Pro Display", "San Francisco", "Segoe", "Roboto", Arial, sans-serif;
+}
+
+.pay-button:hover {
+    background-color: #e6c44c;
+    transform: translateY(-1px);
+}
+
+.button-container {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #2d2d2d;
+}
+
+.footer {
+    background-color: #2d2d2d;
+    padding: 30px;
+    text-align: center;
+    border-top: 1px solid #444;
+}
+
+.footer img {
+    max-width: 120px;
+    height: auto;
+    opacity: 0.8;
+}
+
+.greeting {
+    font-size: 18px;
+    color: #d4af37;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+img {
+    width: 45px;
+    height: 45px;
+}

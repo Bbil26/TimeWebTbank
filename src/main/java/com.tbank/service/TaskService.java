@@ -85,17 +85,16 @@ public class TaskService {
                         )
                 )
         );
-/*
+
         tasks.add(
                 new Task(
                         "Задание 4",
-                        "Пропиши путь до значения product в JSON из примера:",
-                        "Если провести полносью путь до значения 'product', то будет: payload.purchases[0].product , " +
-                                "однако обычно 'payload' вшит на уровне сервиса в пути к объекту его не указыввают: purchases[0].product",
+                        "Подготовь текст для рассылки клиентам Тинькофф Инвестиций об оплате налогов",
+                        "<div class='emailBtn'> Отправить email </div>",
                         null
                 )
         );
-*/
+
         return tasks;
     }
 
