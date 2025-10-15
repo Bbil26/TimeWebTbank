@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>TbankTask</title>
+    <title>TBankTask</title>
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="https://proxy.imgsmail.ru/?e=1760474343&h=NMxHtmtkuBBS0rQ2yHvdlA&email174=bbil26%40vk.com&flags=0&message_id=17533562750671681240&is_https=1&url174=aHR0cHM6Ly9pbWdwcm94eS5jZG4tdGlua29mZi5ydS9jb21wcmVzc2VkL2FIUjBjSE02THk5bGJXRnBiQzFpZFdsc1pHVnlMV0YwZEdGamFHMWxiblJ6TG5NekxXMXpheTUwYVc1cmIyWm1MbkoxTHpka1pUVTNOekJoTW1NM05ESmtNR1ExTW1JelltRm1NRGd4WkRBd09HSms~">
 </head>
 <body>
 
@@ -35,10 +36,6 @@
 
                             <#list task.slides as slide>
 
-                                <#if slide.link??>
-                                    <a id="link" class="hide-block" href="${slide.link.url}">
-                                </#if>
-
                                 <div class="story
                                 <#if slide?counter != 1>hide-block</#if>"
                                 id="${slide?counter}">
@@ -47,14 +44,14 @@
                                         <div class="titleStory">${slide.title}</div>
                                         <div class="textStory">${slide.text}</div>
                                         <#if slide.link??>
-                                           <div class="textUrl">${slide.link.preview}</div>
+                                            <a class="linkBtn" href="${slide.link.url}">
+                                                <div class="textUrl">${slide.link.preview}</div>
+                                            </a>
                                         </#if>
                                     </div>
                                     <img class="imageStory" src="${slide.imageUrl}">
                                 </div>
-                                <#if slide.link??>
-                                    </a>
-                                </#if>
+
                             </#list>
 
                             <div class="scrollRight">

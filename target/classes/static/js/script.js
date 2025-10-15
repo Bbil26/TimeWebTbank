@@ -9,12 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function showStep(index) {
         stories.forEach(step => step.classList.add('hide-block'));
-        document.getElementById("link").classList.add('hide-block');
 
         stories[index].classList.remove('hide-block');
-        if(index == 4) {
-            document.getElementById("link").classList.remove('hide-block');
-        }
     }
 
     scrollRight.addEventListener('click', function (e) {

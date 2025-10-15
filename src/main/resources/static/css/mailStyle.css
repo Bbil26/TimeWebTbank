@@ -26,6 +26,7 @@ body {
 }
 
 .email-table td {
+    line-height: 1.5;
     padding: 7px 0;
     vertical-align: top;
     border: none;
@@ -60,7 +61,7 @@ body {
 
 .pay-button {
     display: inline-block;
-    background-color: #d4af37;
+    background-color: #FFDD2DE5;
     color: #2d2d2d;
     padding: 14px 32px;
     font-size: 16px;
@@ -75,7 +76,7 @@ body {
 }
 
 .pay-button:hover {
-    background-color: #e6c44c;
+    background-color: rgba(227, 198, 59, 0.9);
     transform: translateY(-1px);
 }
 
