@@ -22,7 +22,7 @@ public class TaskService {
                 new Task(
                         "Задание 1",
                         """
-                                    Пропиши путь до значения product в JSON из примера:
+                                    Пропиши путь до значения product в JSON из примера:<p>
                                     
                                     <div style="background:#2d2d2d; padding:15px; border-radius:6px; font-family:monospace; color:#e8e8e8; line-height:1.5;">
                                     &nbsp;&nbsp;"payload": {<br>
