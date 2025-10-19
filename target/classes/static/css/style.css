@@ -17,7 +17,6 @@ body {
     -ms-user-select: none;
     user-select: none;
     -webkit-user-drag: none;
-    -khtml-user-drag: none;
     -webkit-touch-callout: none;
 }
 
@@ -167,12 +166,13 @@ hr {
 }
 
 .contentStory {
+    left: 0;
+    right: 0;
+    margin: 0 20px;
     position: absolute;
     bottom: 20px;
-    align-content: center;
     text-align: left;
     font-size: 16px;
-    padding: 8px 12px;
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -190,23 +190,20 @@ hr {
 
 .titleStory {
     font-weight: bold;
-    line-height: 1.2;
-    max-width: 250px;
+    line-height: 1.1;
+    width: auto;
     color: #eee;
     white-space: normal;
     font-size: 22px;
-    margin: 0;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1)
+    margin-bottom: 2px;
 }
 
 .textStory {
-    max-width: 250px;
+    width: auto;
     color: #ffe;
     white-space: normal;
-    font-size: 0.95em;
-    line-height: 1.4;
-    margin: 0;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 17px;
+    line-height: 1.15;
 }
 
 .scrollLeft, .scrollRight {
@@ -347,30 +344,18 @@ FFDD2D
 */
 .textUrl {
     color: #252525;
-    white-space: normal;
-    font-size: 0.80em;
+    font-size: 0.95em;
     line-height: 1.2;
-    text-shadow: 0 1px 2px rgba(230, 230, 120, 0.5);
-    padding: 10px 20px;
-    background: rgba(255, 221, 45, 0.9);
-    border-radius: 20px;
-    border: 1px solid #FFDD2DE5;
-    transition: all 0.3s ease;
+    padding: 10px 0 10px 0;
+    background: rgba(255, 221, 45, 1);
+    border-radius: 10px;
     cursor: pointer;
+    text-align: center;
     display: inline-block;
-    text-decoration: none;
-    font-weight: 500;
-    backdrop-filter: blur(5px);
-}
-
-.textUrl:hover {
-    background: rgba(255, 221, 45, 0.75);
-    box-shadow: 0 4px 12px rgba(255, 221, 45, 0.35);
-    border: 1px solid #ffeb8a;
+    width: 100%;
 }
 
 a {
-    max-width: fit-content;
     margin-top: 7px;
 }
 
